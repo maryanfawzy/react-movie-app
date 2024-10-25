@@ -1,0 +1,7 @@
+ApiKey = '0e390991a9cde474bc4ea22525c9280a'
+
+https://api.themoviedb.org/3/movie/top_rated?api_key=0e390991a9cde474bc4ea22525c9280a
+
+https://api.themoviedb.org/3/tv/top_rated?api_key=0e390991a9cde474bc4ea22525c9280a
+
+https://api.themoviedb.org/3/search/movie?api_key=0e390991a9cde474bc4ea22525c9280a
