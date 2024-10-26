@@ -5,36 +5,33 @@ import UseFetch from '../hooks/UseFetch'
 
 
 
-const MovieList = ({apiPath}) => {
-  
-  const {data : movies} = UseFetch(apiPath)
- 
+function MovieList({ apiPath }) {
+  const { data: movies, loading } = UseFetch(apiPath);
+
+  if (loading) {
+    return (
+      <main>
+        <section className='max-w-7xl mx-auto p-7'>
+          <div className='flex justify-center'>
+            <p>Loading...</p>
+          </div>
+        </section>
+      </main>
+    );
+  }
 
   return (
-    <main >
-    <section className='max-w-7xl mx-auto p-7'>
-     <div className='flex justify-center flex-wrap'>
-      {movies.map((movie) => (
-              <Card key= {movie.id} movie={movie}/>
-
-      ))}
-
-
-
-
-
-
-
-</div>
-    </section>
+    <main>
+      <section className='max-w-7xl mx-auto p-7'>
+        <div className='flex justify-center flex-wrap'>
+          {movies && movies.map((movie) => (
+            <Card key={movie.id} movie={movie} />
+          ))}
+        </div>
+      </section>
     </main>
-        
-         
-            
-
-        
-    
-  )
+  );
 }
+
 
 export default MovieList

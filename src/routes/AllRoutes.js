@@ -9,11 +9,11 @@ const AllRoutes = () => {
   return (
     <div className="dark:bg-slate-800">
       <Routes>
-        <Route path="/" element={<MovieList apiPath='movie/list'/>}/>
+        <Route path="/" element={<MovieList apiPath="popular"/>}/>
         <Route path="/movie/:id" element ={<MovieDetail/>}/>
-        <Route path="/movies/popular" element={<MovieList apiPath = 'tv/popular'/>}/>
-        <Route path="/movies/top" element = {<MovieList apiPath = 'tv/top_rated'/>} />
-        <Route path="/movies/upcomming" element = {<MovieList apiPath = 'movie/upcoming'/>}/>
+        <Route path="/movies/popular" element={<MovieList apiPath = 'popular'/>}/>
+        <Route path="/movies/top" element = {<MovieList apiPath = 'top_rated'/>} />
+        <Route path="/movies/upcomming" element = {<MovieList apiPath = 'upcoming'/>}/>
         <Route path="*" element = {<PageNotFound/>}/>
 
         <Route path="/search" element ={<Search apiPath = 'search/movie'/>} />
