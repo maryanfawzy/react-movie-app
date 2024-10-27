@@ -5,8 +5,11 @@ import UseFetch from '../hooks/UseFetch'
 
 
 
-function MovieList({ apiPath }) {
-  const { data: movies, loading } = UseFetch(apiPath);
+function MovieList({ apiPath, title }) {
+  const { data: movies, loading, movie } = UseFetch(apiPath);
+  useEffect(()=>{
+    document.title=`${movie.title}/ Cenima`
+  })
 
   if (loading) {
     return (

@@ -11,3 +11,5 @@ up comming = 'https://api.themoviedb.org/3/movie/upcoming?api_key=0e390991a9cde4
 
 
 https://api.themoviedb.org/3/movie/{movie_id}?api_key=0e390991a9cde474bc4ea22525c9280a
+
+https://api.themoviedb.org/3/movie/{28}?api_key=0e390991a9cde474bc4ea22525c9280a
