@@ -6,7 +6,7 @@ import UseFetch from '../hooks/UseFetch'
 const Search = (apiPath) => {
   const [searchParams] = useSearchParams()
   const queryTerm = searchParams.get("q")
-  const { data: movies, loading, movie } = UseFetch(apiPath,queryTerm);
+  const { data: movies } = UseFetch(apiPath,queryTerm);
   useEffect(()=>{
     document.title= `Search Result For ${queryTerm} `
   })
