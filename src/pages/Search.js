@@ -3,13 +3,13 @@ import React, { useEffect } from 'react'
 import Card from '../components/Card'
 import UseFetch from '../hooks/UseFetch'
 
-const Search = (apiPath) => {
+const Search = () => {
   const [searchParams] = useSearchParams()
   const queryTerm = searchParams.get("q")
-  const { data: movies } = UseFetch(apiPath,queryTerm);
+  const { data: movies } = UseFetch('search/movie',queryTerm);
   useEffect(()=>{
     document.title= `Search Result For ${queryTerm} `
-  })
+  },[queryTerm])
   return (
     <main>
       <section className='py-7'>
